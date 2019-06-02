@@ -16,15 +16,15 @@
                 <tbody>
                     @foreach ($tasks as $task)
                     <tr>
-                        <td class="col-xs-1 col-ms-1 col-md-1 col-lg-1">{!! link_to_route('tasks.show', $task->id, ['id' => $task->id]) !!}</td>
-                        <td class="col-xs-2 col-ms-2 col-md-2 col-lg-2">{!! $task->status !!}</td>
-                        <td class="col-xs-6 col-ms-6 col-md-6 col-lg-6">{!! $task->content !!}</td>
+                        <td>{!! link_to_route('tasks.show', $task->id, ['id' => $task->id]) !!}</td>
+                        <td>{!! $task->status !!}</td>
+                        <td>{!! $task->content !!}</td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
         @endif
-        {!! link_to_route('tasks.create', '新規メッセージの投稿', null, ['class' => 'btn btn-primary']) !!}
+        {!! link_to_route('tasks.create', '新規タスクの投稿', null, ['class' => 'btn btn-primary']) !!}
 
 
 @endsection
